@@ -34,7 +34,7 @@ runs:
           if [ "${{ inputs.version }}" = "latest" ]; then
             sudo apt install kurtosis-cli
           else
-            sudo apt install kurtosis-cli=${{ inputs.kurtosis_version }}
+            sudo apt install kurtosis-cli=${{ inputs.version }}
           fi
           kurtosis analytics disable
           echo "$(dirname $(which kurtosis))" >> $GITHUB_PATH
